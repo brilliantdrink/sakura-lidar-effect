@@ -1,0 +1,26 @@
+diff --git a/node_modules/esbuild-style-plugin/dist/index.js b/node_modules/esbuild-style-plugin/dist/index.js
+index 690ccd4..2605757 100644
+--- a/node_modules/esbuild-style-plugin/dist/index.js
++++ b/node_modules/esbuild-style-plugin/dist/index.js
+@@ -66,7 +66,7 @@ var renderStyle = async (filePath, options = {}) => {
+   if (ext === ".sass" || ext === ".scss") {
+     const sassOptions = options.sassOptions || {};
+     const sass = await getModule("sass", "renderSync");
+-    return sass.renderSync({ ...sassOptions, file: filePath }).css.toString();
++    return sass.compile(filePath, sassOptions).css.toString();
+   }
+   if (ext === ".styl") {
+     const stylusOptions = options.stylusOptions || {};
+diff --git a/node_modules/esbuild-style-plugin/dist/index.mjs b/node_modules/esbuild-style-plugin/dist/index.mjs
+index 2011771..78c2633 100644
+--- a/node_modules/esbuild-style-plugin/dist/index.mjs
++++ b/node_modules/esbuild-style-plugin/dist/index.mjs
+@@ -48,7 +48,7 @@ var init_utils = __esm({
+       if (ext === ".sass" || ext === ".scss") {
+         const sassOptions = options.sassOptions || {};
+         const sass = await getModule("sass", "renderSync");
+-        return sass.renderSync({ ...sassOptions, file: filePath }).css.toString();
++        return sass.compile(filePath, sassOptions).css.toString();
+       }
+       if (ext === ".styl") {
+         const stylusOptions = options.stylusOptions || {};
