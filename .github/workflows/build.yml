@@ -1,0 +1,35 @@
+name: Build and push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Main Branch
+        uses: actions/checkout@v4
+        with:
+          path: main
+      - name: Checkout Build Branch
+        uses: actions/checkout@v4
+        with:
+          ref: build
+          path: build
+      - name: Install and Build
+        run: |
+          cd main
+          npm i
+          npm run build
+          rm -r ../build/docs/*
+          cp -R docs ../build
+      - name: Push
+        run: |
+          cd build
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "${{ github.event.head_commit.message }}"
+          git push origin build
