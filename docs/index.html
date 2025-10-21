@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+      html, body {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: black;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .loading {
+        position: absolute;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 1rem;
+
+        z-index: -1;
+      }
+    </style>
+</head>
+<body>
+<div class="loading">
+    <!--<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxzdHlsZT4KICAgICAgICAuc3Bpbm5lcl9PU21XIHsKICAgICAgICAgICAgdHJhbnNmb3JtLW9yaWdpbjogY2VudGVyOwogICAgICAgICAgICBhbmltYXRpb246IHNwaW5uZXJfVDZtQSAuNzVzIHN0ZXAtZW5kIGluZmluaXRlOwogICAgICAgIH0KICAgICAgICBAa2V5ZnJhbWVzIHNwaW5uZXJfVDZtQSB7CiAgICAgICAgICAgIDguMyUgewogICAgICAgICAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoMzBkZWcpCiAgICAgICAgICAgIH0KICAgICAgICAgICAgMTYuNiUgewogICAgICAgICAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoNjBkZWcpCiAgICAgICAgICAgIH0KICAgICAgICAgICAgMjUlIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDkwZGVnKQogICAgICAgICAgICB9CiAgICAgICAgICAgIDMzLjMlIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDEyMGRlZykKICAgICAgICAgICAgfQogICAgICAgICAgICA0MS42JSB7CiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgxNTBkZWcpCiAgICAgICAgICAgIH0KICAgICAgICAgICAgNTAlIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDE4MGRlZykKICAgICAgICAgICAgfQogICAgICAgICAgICA1OC4zJSB7CiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgyMTBkZWcpCiAgICAgICAgICAgIH0KICAgICAgICAgICAgNjYuNiUgewogICAgICAgICAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoMjQwZGVnKQogICAgICAgICAgICB9CiAgICAgICAgICAgIDc1JSB7CiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgyNzBkZWcpCiAgICAgICAgICAgIH0KICAgICAgICAgICAgODMuMyUgewogICAgICAgICAgICAgICAgdHJhbnNmb3JtOiByb3RhdGUoMzAwZGVnKQogICAgICAgICAgICB9CiAgICAgICAgICAgIDkxLjYlIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDMzMGRlZykKICAgICAgICAgICAgfQogICAgICAgICAgICAxMDAlIHsKICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZykKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8ZyBjbGFzcz0ic3Bpbm5lcl9PU21XIiBmaWxsPSIjZmZmIj4KICAgICAgICA8cmVjdCB4PSIxMSIgeT0iMSIgd2lkdGg9IjIiIGhlaWdodD0iNSIgb3BhY2l0eT0iLjE0IiAvPgogICAgICAgIDxyZWN0IHg9IjExIiB5PSIxIiB3aWR0aD0iMiIgaGVpZ2h0PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMiAxMikiIG9wYWNpdHk9Ii4yOSIgLz4KICAgICAgICA8cmVjdCB4PSIxMSIgeT0iMSIgd2lkdGg9IjIiIGhlaWdodD0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoNjAgMTIgMTIpIiBvcGFjaXR5PSIuNDMiIC8+CiAgICAgICAgPHJlY3QgeD0iMTEiIHk9IjEiIHdpZHRoPSIyIiBoZWlnaHQ9IjUiIHRyYW5zZm9ybT0icm90YXRlKDkwIDEyIDEyKSIgb3BhY2l0eT0iLjU3IiAvPgogICAgICAgIDxyZWN0IHg9IjExIiB5PSIxIiB3aWR0aD0iMiIgaGVpZ2h0PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxMjAgMTIgMTIpIiBvcGFjaXR5PSIuNzEiIC8+CiAgICAgICAgPHJlY3QgeD0iMTEiIHk9IjEiIHdpZHRoPSIyIiBoZWlnaHQ9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE1MCAxMiAxMikiIG9wYWNpdHk9Ii44NiIgLz4KICAgICAgICA8cmVjdCB4PSIxMSIgeT0iMSIgd2lkdGg9IjIiIGhlaWdodD0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTgwIDEyIDEyKSIgLz4KICAgIDwvZz4KPC9zdmc+Cg==" />-->
+    <span>Loading, this might take a couple seconds.</span>
+</div>
+
+<script src="/index.js" defer></script>
+</body>
+</html>
