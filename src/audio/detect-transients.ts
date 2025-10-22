@@ -9,7 +9,7 @@ export async function initTransientDetector(audio: AudioNode, onEdge: (data: {po
   lowpass.frequency.setValueAtTime(120, 0)
   lowpass.Q.setValueAtTime(2, 0)
   audio.connect(lowpass, 0)
-  lowpass.connect(audioContext.destination)
+  // lowpass.connect(audioContext.destination)
   await workletPromise;
   const transientProcessor = new AudioWorkletNode(
     audioContext,

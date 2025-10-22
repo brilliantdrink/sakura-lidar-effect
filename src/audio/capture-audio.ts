@@ -37,7 +37,7 @@ export async function getAudioFromDevice(id: string) {
         }
       })
       mediaStreamSource = audioContext.createMediaStreamSource(stream)
-      mediaStreamSource.connect(audioContext.destination)
+      // mediaStreamSource.connect(audioContext.destination)
       mediaStreamSource.connect(splitter)
       return splitter
     })
